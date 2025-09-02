@@ -1,0 +1,59 @@
+MINDCARE/
+│── .env
+│── requirements.txt
+│── Dockerfile
+│── docker-compose.yml
+│
+└── src/
+    ├── main.py               # App entry point
+    ├── database.py           # DB connection/session
+    ├── logging.py
+    ├── create_tables.py
+    │
+    ├── core/                 # App-wide configs & security
+    │   ├── config.py         # Env vars, constants
+    │   ├── security.py       # JWT, password hashing
+    │
+    ├── auth/
+    │   ├── auth_routes.py         # Login, signup, token refresh
+    │   ├── auth_schemas.py        # Auth-related Pydantic models
+    │   ├── auth_services.py       # Business logic for auth
+    │   ├── auth_models.py
+    ├── users/
+    │   ├── user_models.py         # User SQLAlchemy model
+    │   ├── user_schemas.py        # User Pydantic models
+    │   ├── user_routes.py         # User endpoints (profile, etc.)
+    │   ├── user_services.py       # User-related business logic
+    │
+    ├── coaches/
+    │   ├── coach_models.py
+    │   ├── coach_schemas.py
+    │   ├── coach_routes.py
+    │   ├── coach_services.py
+    │
+    ├── admin/
+    │   ├── admin_routes.py         # Admin-only endpoints
+    │   ├── admin_services.py
+    |   ├── admin_schemas.py
+    │
+    ├── journals/
+    │   ├── journal_models.py
+    │   ├── journal_schemas.py
+    │   ├── journal_routes.py
+    │   ├── journal_services.py
+    │
+    ├── bookings/
+    │   ├── booking_models.py
+    │   ├── booking_schemas.py
+    │   ├── booking_routes.py
+    │   ├── booking_services.py
+    │
+    ├── psych_tests/          # Psychometric tests module
+    │   ├── psych_models.py
+    │   ├── psych_schemas.py
+    │   ├── psych_routes.py
+    │   ├── psych_services.py
+    │
+    └── utils/
+        ├── email_service.py
+        ├── file_upload.py
