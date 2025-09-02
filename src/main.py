@@ -45,4 +45,4 @@ app.include_router(user_routes.router)
 
 @app.get('/')
 async def test():
-    return {'status': 'Endpoint created succesfully'}
+    print("Go to this URL: https://mindcare-416e.onrender.com/docs")
