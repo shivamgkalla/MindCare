@@ -64,8 +64,8 @@ def create_user(db: Session, user_data) -> Users:
     db.commit()
     db.refresh(user)
 
-    # # Send verification email
-    # send_verification_email(db, user)
+    # Send verification email
+    send_verification_email(db, user)
 
     return user
 

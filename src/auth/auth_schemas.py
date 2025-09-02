@@ -17,7 +17,7 @@ class CreateUserRequest(BaseModel):
     @field_validator("role")
     def validate_role(cls, value):
         if value not in ALLOWED_ROLES:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Oops! Sorry. You cannot register yourself as an admin.")
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please enter a valid role.")
         return value
 
 
