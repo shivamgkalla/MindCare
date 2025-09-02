@@ -42,7 +42,7 @@ def get_user_by_email(db: Session, email: str) -> Optional[Users]:
 
 def create_user(db: Session, user_data) -> Users:
     if user_data.role not in ALLOWED_ROLES:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Oops! You cannot register yourself as an admin.")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please enter a valid role.")
 
     
     if get_user_by_username(db, user_data.username) or get_user_by_email(db, user_data.email):
