@@ -45,4 +45,5 @@ app.include_router(user_routes.router)
 
 @app.get('/')
 async def test():
-    print("Go to this URL: https://mindcare-416e.onrender.com/docs")
+    url = print("Go to this URL: https://mindcare-416e.onrender.com/docs")
+    return url
