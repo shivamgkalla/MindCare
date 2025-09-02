@@ -3327,3 +3327,5 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-09-02 12:36:46,331 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:54]
 2025-09-02 12:36:46,332 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
 2025-09-02 12:36:46,332 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-02 15:42:37,760 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-02 15:44:11,461 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
