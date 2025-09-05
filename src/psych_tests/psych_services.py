@@ -13,6 +13,7 @@ from src.psych_tests.psych_schemas import (
     PsychOptionCreateAdmin,
     PsychQuestionUpdateAdmin,
     PsychOptionUpdateAdmin,
+    PsychBulkResponseCreate,
 )
 
 
@@ -236,6 +237,45 @@ def submit_response(db: Session, user_id: int, response_in: PsychUserResponseCre
 
     return new_response
 
+
+
+def submit_test_responses(db: Session, user_id: int, submission: PsychBulkResponseCreate):
+    test = db.query(PsychTest).filter(PsychTest.id == submission.test_id).first()
+
+    if not test:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Test nout found.")
+
+    saved_responses = []
+
+    for resp in submission.responses:
+        # Validate question belongs to test
+        question = db.query(PsychQuestion).filter(PsychQuestion.id == resp.question_id).first()
+        if not question or question.test_id != submission.test_id:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Invalid question {resp.question_id} for this test.")
+
+        # Validate option belongs to question
+        option = db.query(PsychOption).filter(PsychOption.id == resp.option_id).first()
+        if not option or option.question_id != resp.question_id:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Invalid option {resp.option_id} for question {resp.question_id}.")
+
+        # Save response
+        new_response = PsychUserResponse(
+            user_id=user_id,
+            test_id=submission.test_id,
+            question_id=resp.question_id,
+            option_id=resp.option_id,
+        )
+
+        db.add(new_response)
+        saved_responses.append(new_response)
+
+    db.commit()
+
+    for response in saved_responses:
+        db.refresh(response)
+
+
+    return saved_responses
 
 
 def get_user_responses(db: Session, user_id: int, test_id: int) -> List[PsychUserResponse]:

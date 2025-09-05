@@ -1,5 +1,5 @@
 from typing import List, Optional
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 # ---------- Option ----------
@@ -108,3 +108,39 @@ class PsychUserResponseOut(PsychUserResponseBase):
 
 
     model_config = ConfigDict(from_attributes=True)
+
+
+
+# ---------- Bulk Test Submission ----------
+
+# ---------- Single Response ----------
+class PsychSingleResponse(BaseModel):
+    question_id: int = Field(..., description="ID of the question")
+    option_id: int = Field(..., description="ID of the selected option")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "question_id": 5,
+                "option_id": 3
+            }
+        }
+
+
+# ---------- Bulk Submission ----------
+class PsychBulkResponseCreate(BaseModel):
+    test_id: int = Field(..., description="ID of the test being submitted")
+    responses: List[PsychSingleResponse]
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "test_id": 2,
+                "responses": [
+                    {"question_id": 1, "option_id": 3},
+                    {"question_id": 2, "option_id": 6},
+                    {"question_id": 3, "option_id": 9}
+                ]
+            }
+        }
+

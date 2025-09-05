@@ -119,16 +119,9 @@ def delete_option(db: db_dependency, option_id: int, current=Depends(require_rol
 # ------------------ User Routes ------------------
 
 # Get a single test (user view)
-@router.get("/user/{test_id}", response_model=schemas.PsychTestOutUser, status_code=status.HTTP_200_OK)
+@router.get("/user/tests/{test_id}", response_model=schemas.PsychTestOutUser, status_code=status.HTTP_200_OK)
 def get_test_user_route(db: db_dependency, test_id: int, current=Depends(require_role(["user"]))):
     return services.get_test_user(db, test_id)
-
-
-
-# List all tests (user view)
-@router.get("/user", response_model=List[schemas.PsychTestOutUser], status_code=status.HTTP_200_OK)
-def list_tests_user(db: db_dependency, current=Depends(require_role(["admin"]))):
-    return services.get_all_tests_user(db)
 
 
 
@@ -136,6 +129,19 @@ def list_tests_user(db: db_dependency, current=Depends(require_role(["admin"])))
 @router.post("/user/responses", response_model=schemas.PsychUserResponseOut, status_code=status.HTTP_200_OK)
 def submit_response(db: db_dependency, response_in: schemas.PsychUserResponseCreate, current=Depends(require_role(["user"]))):
     return services.submit_response(db, user_id=current.id, response_in=response_in)
+
+
+
+# List all tests (user view)
+@router.get("/user/tests", response_model=List[schemas.PsychTestOutUser], status_code=status.HTTP_200_OK)
+def list_tests_user(db: db_dependency, current=Depends(require_role(["user"]))):
+    return services.get_all_tests_user(db)
+
+
+
+@router.post("/user/submit", response_model=List[schemas.PsychUserResponseOut], status_code=status.HTTP_201_CREATED)
+def submit_test_responses(db: db_dependency, submission: schemas.PsychBulkResponseCreate, current=Depends(require_role(["user"]))):
+    return services.submit_test_responses(db, current.id, submission)
 
 
 
