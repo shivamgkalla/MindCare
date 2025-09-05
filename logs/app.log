@@ -3714,3 +3714,25 @@ Traceback (most recent call last):
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-09-05 16:03:07,021 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
 2025-09-05 16:03:07,021 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-09-05 16:40:26,851 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-05 16:40:44,013 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-05 16:40:44,014 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-05 16:40:44,014 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-05 16:40:44,014 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-05 16:40:44,014 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-05 16:40:44,015 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:54]
+2025-09-05 16:40:44,016 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-05 16:40:44,016 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-05 16:40:44,045 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-05 16:40:44,046 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-05 16:40:44,047 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround

@@ -245,6 +245,13 @@ def submit_test_responses(db: Session, user_id: int, submission: PsychBulkRespon
     if not test:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Test nout found.")
 
+
+    # Safeguard: check if user already submitted this test
+    existing = db.query(PsychUserResponse).filter(PsychUserResponse.user_id == user_id, PsychUserResponse.test_id == submission.test_id).first()
+
+    if existing:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="You have already submitted this test.")
+
     saved_responses = []
 
     for resp in submission.responses:
