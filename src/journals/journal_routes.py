@@ -47,7 +47,7 @@ def get_journal(db: db_dependency, journal_id: int, current=Depends(require_role
 # Update Journal
 @router.put("/{journal_id}", response_model=JournalOut, status_code=status.HTTP_200_OK)
 def update_journal_route(db: db_dependency, journal_id: int, journal_data: JournalUpdate, current=Depends(require_role(["user"]))):
-    return update_journal(db, journal_id, journal_data)
+    return update_journal(db, journal_id, journal_data, current.id)
 
 
 
