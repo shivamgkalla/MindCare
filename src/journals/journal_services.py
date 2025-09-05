@@ -14,6 +14,7 @@ def create_journal(db: Session, journal_data: JournalCreate, user_id: int) -> Jo
         title = journal_data.title,
         content = journal_data.content,
         image_url = journal_data.image_url,
+        mood = journal_data.mood
     )
 
     db.add(new_journal)
@@ -49,17 +50,24 @@ def update_journal(db: Session, journal_id: int, journal_data: JournalUpdate, us
     if journal.user_id != user_id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized to update this journal")
 
-    if journal.title is not None:
-        journal.title = journal_data.title or journal.title
+    if journal_data.title is not None:
+        journal.title = journal_data.title
 
-    if journal.content is not None:
-        journal.content = journal_data.content or journal.content
+    if journal_data.content is not None:
+        journal.content = journal_data.content
+
+    if journal_data.image_url is not None:
+        journal.image_url = journal_data.image_url
+
+    if journal_data.mood is not None:
+        journal.mood = journal_data.mood
 
     journal.updated_date = datetime.now()
 
     db.commit()
     db.refresh(journal)
     return journal
+
 
 
 

@@ -14,6 +14,7 @@ class Journal(Base):
     title = Column(String(200), nullable=False)
     content = Column(Text, nullable = False)
     image_url = Column(String(500), nullable=True)
+    mood = Column(String(50), nullable=True)
     created_at = Column(DateTime, default=datetime.now)
     updated_date = Column(DateTime, default=datetime.now, onupdate=datetime.now)
 
