@@ -218,6 +218,9 @@ def reset_user_password(db: Session, token: str, new_password: str):
 
     if not user.is_verified:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN ,detail="Please verify your email first.")
+    
+    if verify_password(new_password, user.hashed_password):
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="New password cannot be the same as previous password.")
 
     hashed = hash_password(new_password)
     user.hashed_password = hashed

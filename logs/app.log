@@ -3767,3 +3767,166 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-09-05 17:50:50,037 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
 2025-09-05 17:50:58,404 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
 2025-09-05 18:27:17,981 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 10:17:06,645 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 10:18:32,345 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:58]
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,346 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 10:18:32,534 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-17 10:18:32,538 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-17 10:18:32,538 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:58]
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 10:18:32,826 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 10:39:59,568 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 12:54:11,147 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:54]
+2025-09-17 12:54:14,547 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:14,548 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-17 12:54:29,646 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:54]
+2025-09-17 12:54:29,647 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:54:29,647 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 12:55:02,915 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 12:55:16,632 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:34]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[35:43]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[44:54]
+2025-09-17 12:55:16,633 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 12:55:16,634 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 12:55:16,662 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-17 12:55:16,663 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-17 12:55:16,664 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-09-17 12:56:23,878 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 15:11:17,930 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 15:18:19,575 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:18:19,577 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:35]
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[36:44]
+2025-09-17 15:18:19,578 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[45:56]
+2025-09-17 15:18:19,579 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:18:19,579 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 15:18:19,609 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-17 15:18:19,611 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-17 15:18:19,611 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-09-17 15:19:53,457 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 15:55:02,943 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-17 15:55:02,946 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-17 15:55:02,946 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-09-17 15:56:14,760 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,761 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:38]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[39:47]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[48:62]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[63:68]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[70:79]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[80:86]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[87:100]
+2025-09-17 15:56:14,762 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[101:109]
+2025-09-17 15:56:14,763 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:14,763 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 15:56:31,664 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[0:10]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[11:19]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[20:28]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[29:38]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_start with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_name with data[39:47]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 625 - Calling on_field_data with data[48:62]
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_field_end with no data
+2025-09-17 15:56:31,665 - DEBUG - python_multipart.multipart - callback - 628 - Calling on_end with no data
+2025-09-17 16:02:01,883 - INFO - root - configure_logging - 88 - Logging configured. Level: DEBUG
+2025-09-17 16:03:49,127 - WARNING - passlib.handlers.bcrypt - _load_backend_mixin - 622 - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kiki/Office Work Stuff/MindCare/env/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-17 16:03:49,130 - DEBUG - passlib.handlers.bcrypt - _load_backend_mixin - 625 - detected 'bcrypt' backend, version '<unknown>'
+2025-09-17 16:03:49,130 - DEBUG - passlib.handlers.bcrypt - _finalize_backend_mixin - 406 - 'bcrypt' backend lacks $2$ support, enabling workaround
