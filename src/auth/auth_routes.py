@@ -3,7 +3,7 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from . import auth_models
 from src.database import get_db
-from src.auth import auth_services, auth_schemas
+from src.auth import auth_services
 from src.auth.auth_services import create_user, get_current_user, send_forgot_password_email, reset_user_password, verify_user_email, resend_verification_email
 from fastapi.security import OAuth2PasswordRequestForm
 from src.auth.auth_schemas import CreateUserRequest, UserResponse, TokenResponse, ForgotPasswordRequest, ResetPasswordRequest, ResendVerificationRequest
@@ -56,7 +56,7 @@ async def get_me(current_user: Annotated[auth_models.Users, Depends(get_current_
 
 
 @router.post("/forgot-password", status_code=status.HTTP_200_OK)
-def forgot_password(request: auth_schemas.ForgotPasswordRequest, db: db_dependency):
+def forgot_password(request: ForgotPasswordRequest, db: db_dependency):
     message = send_forgot_password_email(db, request.email)
 
     return {"message": message}
